@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wholesale Deal Finder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Wholesale Deal Finder</h1>
+
+  <input type="text" id="location" placeholder="Enter city or ZIP">
+  <button onclick="search()">Search</button>
+
+  <div id="results"></div>
+
+  <script src="app.js"></script>
+  <script>
+    function search() {
+      if (typeof runSearch === 'function') {
+        runSearch();
+      }
+    }
+  </script>
+
+</body>
+</html>
