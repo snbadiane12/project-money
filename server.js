@@ -3305,6 +3305,15 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
+  // Express equivalent:
+  // app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
+  if (req.method === 'GET' && urlObj.pathname === '/') {
+    serveFile(res, '/index.html');
+    return;
+  }
+
+  // Express equivalent:
+  // app.use(express.static(path.join(__dirname, 'public')));
   if (req.method === 'GET') {
     serveFile(res, urlObj.pathname);
     return;
