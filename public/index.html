@@ -1,26 +1,295 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Wholesale Deal Finder</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wholesale Deal Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://browser.sentry-cdn.com/7.120.3/bundle.tracing.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero">
+        <div class="panel">
+          <h1 class="header-title">Wholesale Deal Finder</h1>
+          <p class="header-sub">Nationwide wholesaling dashboard with live search, ARV, CRM, outreach, and subscription workflows.</p>
+          <div class="badges">
+            <span class="badge">Search + Map</span>
+            <span class="badge">ARV + MAO</span>
+            <span class="badge">CRM + Billing</span>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Portfolio Snapshot</h3>
+          <div class="metrics-grid">
+            <div class="metric"><p>Active Results</p><h3 id="kpiResults">0</h3></div>
+            <div class="metric"><p>Avg MAO</p><h3 id="kpiMao">$0</h3></div>
+            <div class="metric"><p>Avg Deal Score</p><h3 id="kpiScore">0/100</h3></div>
+          </div>
+        </div>
+      </section>
 
-  <h1>Wholesale Deal Finder</h1>
+      <section class="panel auth-panel">
+        <h3>Account</h3>
+        <p class="header-sub" id="authStatus">Not signed in.</p>
+        <div class="auth-grid">
+          <input id="authEmail" type="email" placeholder="Email" />
+          <input id="authPassword" type="password" placeholder="Password" />
+          <button class="ghost-btn" id="registerBtn" type="button">Register</button>
+          <button class="primary-btn" id="loginBtn" type="button">Login</button>
+          <button class="ghost-btn" id="logoutBtn" type="button">Logout</button>
+        </div>
+        <div class="auth-actions">
+          <button class="ghost-btn" id="saveSearchCloudBtn" type="button">Save Current Search (Cloud)</button>
+          <button class="ghost-btn" id="saveDealCloudBtn" type="button">Save Selected Deal (Cloud)</button>
+        </div>
+        <div class="auth-actions">
+          <button class="ghost-btn" id="requestVerifyBtn" type="button">Request Email Verification</button>
+          <input id="verifyTokenInput" placeholder="Verification token" />
+          <button class="ghost-btn" id="verifyEmailBtn" type="button">Verify Email</button>
+        </div>
+        <div class="auth-actions">
+          <button class="ghost-btn" id="requestResetBtn" type="button">Request Password Reset</button>
+          <input id="resetTokenInput" placeholder="Reset token" />
+          <input id="newPasswordInput" type="password" placeholder="New password (8+ chars)" />
+          <button class="ghost-btn" id="resetPasswordBtn" type="button">Reset Password</button>
+        </div>
+        <p class="header-sub" id="authActionStatus"></p>
+      </section>
 
-  <input type="text" id="location" placeholder="Enter city or ZIP">
-  <button onclick="search()">Search</button>
+      <section class="panel" id="billingPanel">
+        <h3>Subscription</h3>
+        <p class="header-sub" id="billingStatus">Plan loading...</p>
+        <div class="auth-actions">
+          <button class="primary-btn" id="startTrialCheckoutBtn" type="button">Start 7-Day Trial ($20/mo after)</button>
+          <button class="ghost-btn" id="openBillingPortalBtn" type="button">Manage Billing</button>
+          <button class="ghost-btn" id="refreshBillingBtn" type="button">Refresh Billing</button>
+        </div>
+        <p class="header-sub" id="billingActionStatus"></p>
+      </section>
 
-  <div id="results"></div>
+      <section class="panel search-panel">
+        <h3>Search Zillow-Style Inventory (U.S.)</h3>
+        <p class="header-sub">Filter by location, price range, beds, and baths. Then run wholesale analysis on any property.</p>
+        <p class="header-sub" id="dataStatus">Data source: loading...</p>
+        <div id="sourceHealthBadges" class="source-health"></div>
+        <label class="toggle-row" for="allowSampleFallback">
+          <input id="allowSampleFallback" type="checkbox" />
+          <span>Allow Sample Fallback (when live providers fail)</span>
+        </label>
+        <label class="toggle-row" for="onlyZillowPhotos">
+          <input id="onlyZillowPhotos" type="checkbox" />
+          <span>Only Show Listings With Zillow-Sourced Photos</span>
+        </label>
+        <form id="searchForm" class="search-form">
+          <input id="location" placeholder="City, state, ZIP, or address keyword" />
+          <input id="minPrice" type="number" min="0" step="1000" placeholder="Min Price" />
+          <input id="maxPrice" type="number" min="0" step="1000" placeholder="Max Price" />
+          <input id="beds" type="number" min="0" step="1" placeholder="Min Beds" />
+          <input id="baths" type="number" min="0" step="0.5" placeholder="Min Baths" />
+          <button class="primary-btn" type="submit">Search</button>
+        </form>
+      </section>
 
-  <script src="app.js"></script>
-  <script>
-    function search() {
-      if (typeof runSearch === 'function') {
-        runSearch();
-      }
-    }
-  </script>
+      <section class="panel" style="margin-bottom:16px;">
+        <h3>Map Area Filter (Circle)</h3>
+        <p class="header-sub">Click map to place circle and refine area.</p>
+        <div class="map-controls">
+          <label class="header-sub" for="mapRadiusMiles">Radius (miles)</label>
+          <input id="mapRadiusMiles" type="range" min="1" max="25" value="5" />
+          <span id="mapRadiusLabel" class="header-sub">5 mi</span>
+          <button class="ghost-btn" id="clearMapFilterBtn" type="button">Clear Circle</button>
+        </div>
+        <div class="map-controls">
+          <button class="ghost-btn" id="startPolygonBtn" type="button">Start Polygon Draw</button>
+          <button class="ghost-btn" id="finishPolygonBtn" type="button">Finish Polygon</button>
+          <button class="ghost-btn" id="clearPolygonBtn" type="button">Clear Polygon</button>
+          <span id="polygonStatus" class="header-sub">Polygon draw off</span>
+        </div>
+        <div id="mapView"></div>
+      </section>
 
-</body>
+      <section class="content-grid">
+        <div class="panel">
+          <h3>Property Results</h3>
+          <p class="header-sub" id="resultsStatus">Loading results...</p>
+          <div id="results" class="listings"></div>
+          <div class="pagination-row">
+            <button class="ghost-btn" id="loadMoreBtn" type="button">Load More Houses</button>
+          </div>
+        </div>
+        <div class="analyzer">
+          <div class="block">
+            <h3>Auto ARV From Photos</h3>
+            <div class="big-number" id="arvDisplay">$0</div>
+            <div class="calc-grid" id="arvRangeGrid"></div>
+            <p class="header-sub" id="arvAutoStatus">Select a property to calculate ARV from photos.</p>
+          </div>
+          <div class="block">
+            <h3>Your Assignment Fee</h3>
+            <input class="fee-input" id="assignmentFee" type="number" min="0" step="500" value="5000" />
+            <div class="fee-buttons" id="feeButtons"></div>
+            <div class="confirmed" id="confirmedFee">Confirmed: $5,000</div>
+          </div>
+          <div class="block">
+            <h3>Deal Analyzer Output</h3>
+            <div id="flipSignal"></div>
+            <div class="calc-grid" id="calcGrid"></div>
+            <div class="diagnosis" id="diagnosis"></div>
+          </div>
+          <div class="block">
+            <h3>AI Photo Rehab Grader</h3>
+            <div class="calc-grid">
+              <div><p class="header-sub">Select Photo</p><select id="photoSelect"></select></div>
+              <div style="display:flex;align-items:flex-end;"><button class="primary-btn" id="gradePhotoBtn" style="width:100%;">Run AI Photo Grade</button></div>
+            </div>
+            <div class="calc-grid" style="margin-top:8px;">
+              <button class="ghost-btn" id="gradeAllPhotosBtn">Run Batch Photo Grade</button>
+              <button class="ghost-btn" id="savePipelineBtn">Save Deal to Pipeline</button>
+            </div>
+            <p class="header-sub" id="photoGradeStatus">Select a property and photo to run analysis.</p>
+            <div class="calc-grid" id="photoGradeGrid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-grid" style="margin-top:16px;">
+        <div class="panel">
+          <h3>Deal Pipeline</h3>
+          <div class="calc-grid" id="pipelineBoard"></div>
+        </div>
+        <div class="panel">
+          <h3>Deal Comparison & Export</h3>
+          <div class="calc-grid" id="compareGrid"></div>
+          <div class="calc-grid" style="margin-top:8px;">
+            <button class="ghost-btn" id="exportJsonBtn">Export Selected Deal JSON</button>
+            <button class="ghost-btn" id="exportCsvBtn">Export Selected Deal CSV</button>
+          </div>
+          <p class="header-sub" id="exportStatus"></p>
+        </div>
+      </section>
+
+      <section class="content-grid" style="margin-top:16px;">
+        <div class="panel">
+          <h3>CRM Leads</h3>
+          <div class="auth-actions">
+            <button class="ghost-btn" id="createLeadFromSelectedBtn" type="button">Create Lead From Selected House</button>
+            <button class="ghost-btn" id="refreshCrmBtn" type="button">Refresh CRM</button>
+          </div>
+          <div id="crmLeadsList" class="cloud-list"></div>
+        </div>
+        <div class="panel">
+          <h3>CRM Tasks</h3>
+          <div id="crmTasksList" class="cloud-list"></div>
+        </div>
+      </section>
+
+      <section class="content-grid" style="margin-top:16px;">
+        <div class="panel">
+          <h3>Cloud Library</h3>
+          <p class="header-sub">Your saved searches and deals tied to your account.</p>
+          <div class="auth-actions"><button class="ghost-btn" id="refreshCloudBtn" type="button">Refresh Cloud Data</button></div>
+          <h4 style="margin-top:10px;">Saved Searches</h4>
+          <div id="savedSearchesList" class="cloud-list"></div>
+          <h4 style="margin-top:10px;">Saved Deals</h4>
+          <div id="savedDealsList" class="cloud-list"></div>
+        </div>
+        <div class="panel">
+          <h3>Source Health Dashboard</h3>
+          <div id="sourceHealthHistoryGrid" class="cloud-list"></div>
+        </div>
+      </section>
+
+      <section class="panel" style="margin-top:16px;">
+        <h3>Outreach Consent Logs</h3>
+        <div class="auth-actions"><button class="ghost-btn" id="refreshConsentLogsBtn" type="button">Refresh Consent Logs</button></div>
+        <div id="consentLogsList" class="cloud-list"></div>
+      </section>
+
+      <section class="panel hidden" id="adminPanel" style="margin-top:16px;">
+        <h3>Admin Console</h3>
+        <div class="auth-actions">
+          <button class="ghost-btn" id="refreshAdminBtn" type="button">Refresh Admin Data</button>
+          <button class="ghost-btn" id="adminSecurityBtn" type="button">Security Stats</button>
+          <button class="ghost-btn" id="adminBackupBtn" type="button">Create DB Backup</button>
+          <button class="ghost-btn" id="adminRestoreBtn" type="button">Restore Latest Backup</button>
+          <button class="ghost-btn" id="adminStripeCheckBtn" type="button">Stripe Live Check</button>
+          <button class="ghost-btn" id="adminReadinessBtn" type="button">Production Readiness</button>
+        </div>
+        <p class="header-sub" id="adminStatusLine"></p>
+        <div class="content-grid" style="margin-top:8px;">
+          <div><h4>Users</h4><div id="adminUsersList" class="cloud-list"></div></div>
+          <div><h4>Audit Logs</h4><div id="adminAuditList" class="cloud-list"></div></div>
+        </div>
+      </section>
+
+      <section class="panel" style="margin-top:16px;">
+        <h3>AI Contact & Outreach</h3>
+        <div class="calc-grid" id="contactInfoGrid"></div>
+        <div class="calc-grid" style="margin-top:8px;">
+          <button class="ghost-btn" id="msgOwnerBtn">Message Owner</button>
+          <button class="ghost-btn" id="msgAgentBtn">Message Agent</button>
+          <button class="ghost-btn" id="emailOwnerBtn">Email Owner</button>
+          <button class="ghost-btn" id="emailAgentBtn">Email Agent</button>
+          <button class="ghost-btn" id="callOwnerBtn">AI Voice Call Owner</button>
+          <button class="ghost-btn" id="callAgentBtn">AI Voice Call Agent</button>
+        </div>
+        <p class="header-sub" id="contactActionStatus">Select a house to load contact details.</p>
+      </section>
+
+      <section class="tools">
+        <div class="tool-section section-ai"><div class="tool-header"><h3>AI-Powered Tools</h3></div><div class="tool-grid" id="aiTools"></div></div>
+        <div class="tool-section section-value"><div class="tool-header"><h3>Valuation & Offers</h3></div><div class="tool-grid" id="valueTools"></div></div>
+        <div class="tool-section section-cost"><div class="tool-header"><h3>Costs & Expenses</h3></div><div class="tool-grid" id="costTools"></div></div>
+        <div class="tool-section section-pipeline"><div class="tool-header"><h3>Analysis & Pipeline</h3></div><div class="tool-grid" id="pipelineTools"></div></div>
+      </section>
+
+      <section class="panel" style="margin-top:16px;">
+        <h3>AI Tool Output</h3>
+        <pre id="toolOutput" style="white-space:pre-wrap;word-break:break-word;background:#0b111b;border:1px solid #28344b;border-radius:12px;padding:12px;min-height:120px;"></pre>
+      </section>
+
+      <div class="confirm-modal hidden" id="confirmModal">
+        <div class="confirm-card">
+          <h3 id="confirmTitle">Send Message?</h3>
+          <p class="header-sub" id="confirmSubtitle"></p>
+          <pre id="confirmPreview"></pre>
+          <div class="confirm-actions">
+            <button class="ghost-btn" id="cancelSendBtn">Cancel</button>
+            <button class="primary-btn" id="confirmSendBtn">Yes, Send</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-modal hidden" id="galleryModal">
+        <div class="gallery-card">
+          <button class="gallery-close" id="closeGalleryBtn" aria-label="Close photo viewer">×</button>
+          <div class="gallery-title-row">
+            <h3 id="galleryTitle">Property Photos</h3>
+            <p class="header-sub" id="galleryCounter">1 / 1</p>
+          </div>
+          <p class="header-sub" id="galleryStatus">Loading property photos...</p>
+          <p class="header-sub" id="galleryPhotoSource"></p>
+          <div class="gallery-stage">
+            <button class="gallery-nav" id="prevPhotoBtn" aria-label="Previous photo">‹</button>
+            <img id="galleryImage" src="" alt="Property photo" />
+            <button class="gallery-nav" id="nextPhotoBtn" aria-label="Next photo">›</button>
+          </div>
+          <div class="gallery-thumbs" id="galleryThumbs"></div>
+        </div>
+      </div>
+
+      <p class="disclaimer">
+        Legal: <a href="/terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a> |
+        <a href="/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+      </p>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/app.js"></script>
+  </body>
 </html>
