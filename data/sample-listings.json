@@ -1,0 +1,254 @@
+﻿[
+    {
+        "id":  "z-1001",
+        "address":  "1842 W 57th St, Cleveland, OH",
+        "state":  "OH",
+        "city":  "Cleveland",
+        "price":  119000,
+        "beds":  3,
+        "baths":  1.5,
+        "sqft":  1420,
+        "yearBuilt":  1928,
+        "daysOnZillow":  67,
+        "photoCount":  17,
+        "url":  "https://www.zillow.com/",
+        "description":  "As-is handyman special. Needs roof, outdated kitchen and bath, minor foundation settling visible in basement.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1568605114967-8130f3a36994",
+                       "https://images.unsplash.com/photo-1570129477492-45c003edd2be"
+                   ],
+        "lat":  41.4843,
+        "lng":  -81.7244
+    },
+    {
+        "id":  "z-1002",
+        "address":  "3309 N 22nd Ave, Phoenix, AZ",
+        "state":  "AZ",
+        "city":  "Phoenix",
+        "price":  282000,
+        "beds":  4,
+        "baths":  2,
+        "sqft":  1680,
+        "yearBuilt":  1986,
+        "daysOnZillow":  12,
+        "photoCount":  32,
+        "url":  "https://www.zillow.com/",
+        "description":  "Move-in ready and recently updated. New flooring, fresh paint, quartz counters. Motivated due to relocation.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
+                       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+                   ],
+        "lat":  33.4484,
+        "lng":  -112.089
+    },
+    {
+        "id":  "z-1003",
+        "address":  "817 E 11th St, Indianapolis, IN",
+        "state":  "IN",
+        "city":  "Indianapolis",
+        "price":  94000,
+        "beds":  2,
+        "baths":  1,
+        "sqft":  980,
+        "yearBuilt":  1915,
+        "daysOnZillow":  102,
+        "photoCount":  11,
+        "url":  "https://www.zillow.com/",
+        "description":  "Investor special. Fire damage in rear room, water intrusion, mold signs, full rehab required. Cash only.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1554995207-c18c203602cb",
+                       "https://images.unsplash.com/photo-1560185007-cde436f6a4d0"
+                   ],
+        "lat":  39.7834,
+        "lng":  -86.1581
+    },
+    {
+        "id":  "z-1004",
+        "address":  "602 Pine Hollow Dr, Birmingham, AL",
+        "state":  "AL",
+        "city":  "Birmingham",
+        "price":  164500,
+        "beds":  3,
+        "baths":  2,
+        "sqft":  1512,
+        "yearBuilt":  1977,
+        "daysOnZillow":  54,
+        "photoCount":  21,
+        "url":  "https://www.zillow.com/",
+        "description":  "Solid bones, cosmetic updates needed. Seller inherited property and wants fast close.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1576941089067-2de3c901e126",
+                       "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd"
+                   ],
+        "lat":  33.5036,
+        "lng":  -86.7954
+    },
+    {
+        "id":  "z-1005",
+        "address":  "1204 Martin St, St Louis, MO",
+        "state":  "MO",
+        "city":  "St Louis",
+        "price":  137000,
+        "beds":  3,
+        "baths":  1,
+        "sqft":  1260,
+        "yearBuilt":  1949,
+        "daysOnZillow":  89,
+        "photoCount":  14,
+        "url":  "https://www.zillow.com/",
+        "description":  "Deferred maintenance throughout. Old HVAC, peeling paint, possible sewer line issue. Priced to sell quickly.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1600573472550-8090b5e0745e",
+                       "https://images.unsplash.com/photo-1494526585095-c41746248156"
+                   ],
+        "lat":  38.627,
+        "lng":  -90.2294
+    },
+    {
+        "id":  "z-1006",
+        "address":  "89 Willow Creek Ln, Jacksonville, FL",
+        "state":  "FL",
+        "city":  "Jacksonville",
+        "price":  219000,
+        "beds":  3,
+        "baths":  2,
+        "sqft":  1455,
+        "yearBuilt":  1998,
+        "daysOnZillow":  6,
+        "photoCount":  36,
+        "url":  "https://www.zillow.com/",
+        "description":  "Clean listing with strong curb appeal. Not much rehab needed. Seller testing market.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+                       "https://images.unsplash.com/photo-1518780664697-55e3ad937233"
+                   ],
+        "lat":  30.3472,
+        "lng":  -81.6707
+    },
+    {
+        "id":  "z-1007",
+        "address":  "2418 Oakbend Dr, Charlotte, NC",
+        "state":  "NC",
+        "city":  "Charlotte",
+        "price":  248000,
+        "beds":  3,
+        "baths":  2,
+        "sqft":  1498,
+        "yearBuilt":  1989,
+        "daysOnZillow":  44,
+        "photoCount":  23,
+        "url":  "https://www.zillow.com/",
+        "description":  "Older finishes, roof near end of life, and minor water staining. Seller relocating for work and wants flexible close.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1600047509358-9dc75507daeb",
+                       "https://images.unsplash.com/photo-1513584684374-8bab748fbf90"
+                   ],
+        "lat":  35.2121,
+        "lng":  -80.8431
+    },
+    {
+        "id":  "z-1008",
+        "address":  "813 Cedar Bluff Ct, Raleigh, NC",
+        "state":  "NC",
+        "city":  "Raleigh",
+        "price":  289000,
+        "beds":  4,
+        "baths":  2,
+        "sqft":  1710,
+        "yearBuilt":  1994,
+        "daysOnZillow":  31,
+        "photoCount":  28,
+        "url":  "https://www.zillow.com/",
+        "description":  "Cosmetic updates needed throughout. Kitchen and baths are dated. Strong neighborhood resale demand.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+                       "https://images.unsplash.com/photo-1600607688969-a5bfcd646154"
+                   ],
+        "lat":  35.7796,
+        "lng":  -78.6232
+    },
+    {
+        "id":  "z-1009",
+        "address":  "5502 Eastview Rd, Greensboro, NC",
+        "state":  "NC",
+        "city":  "Greensboro",
+        "price":  174900,
+        "beds":  3,
+        "baths":  1,
+        "sqft":  1214,
+        "yearBuilt":  1968,
+        "daysOnZillow":  77,
+        "photoCount":  12,
+        "url":  "https://www.zillow.com/",
+        "description":  "As-is sale with deferred maintenance. HVAC old, flooring damaged, and likely plumbing updates needed.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1560184897-6ed189bf02f4",
+                       "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf"
+                   ],
+        "lat":  36.0876,
+        "lng":  -79.822
+    },
+    {
+        "id":  "z-1010",
+        "address":  "1907 Maple Grove Ct, Dallas, TX",
+        "state":  "TX",
+        "city":  "Dallas",
+        "price":  269000,
+        "beds":  3,
+        "baths":  2,
+        "sqft":  1586,
+        "yearBuilt":  1981,
+        "daysOnZillow":  26,
+        "photoCount":  25,
+        "url":  "https://www.zillow.com/",
+        "description":  "Vacant and easy access. Cosmetic rehab needed plus possible foundation leveling recommended.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
+                       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+                   ],
+        "lat":  32.7617,
+        "lng":  -96.812
+    },
+    {
+        "id":  "z-1011",
+        "address":  "347 Harbor Point Ln, Norfolk, VA",
+        "state":  "VA",
+        "city":  "Norfolk",
+        "price":  226500,
+        "beds":  3,
+        "baths":  2,
+        "sqft":  1462,
+        "yearBuilt":  1991,
+        "daysOnZillow":  18,
+        "photoCount":  30,
+        "url":  "https://www.zillow.com/",
+        "description":  "Well-kept home with light updates needed only. Seller downsizing and open to quick terms.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+                       "https://images.unsplash.com/photo-1523217582562-09d0def993a6"
+                   ],
+        "lat":  36.8508,
+        "lng":  -76.2859
+    },
+    {
+        "id":  "z-1012",
+        "address":  "72 Magnolia Ridge Way, Columbia, SC",
+        "state":  "SC",
+        "city":  "Columbia",
+        "price":  158000,
+        "beds":  3,
+        "baths":  2,
+        "sqft":  1338,
+        "yearBuilt":  1974,
+        "daysOnZillow":  95,
+        "photoCount":  10,
+        "url":  "https://www.zillow.com/",
+        "description":  "Investor-focused listing. Roof leak and interior damage present. Seller wants cash and fast close.",
+        "photos":  [
+                       "https://images.unsplash.com/photo-1613977257363-707ba9348227",
+                       "https://images.unsplash.com/photo-1616594039964-3b5d52c6f31d"
+                   ],
+        "lat":  34.0157,
+        "lng":  -81.0198
+    }
+]

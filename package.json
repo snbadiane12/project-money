@@ -1,0 +1,14 @@
+﻿{
+  "name": "wholesale-deal-finder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nationwide Zillow-style wholesaling analyzer with ARV, assignment fee, and rehab scoring",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node scripts/run-tests.js",
+    "check": "node --check server.js && node --check public/app.js",
+    "readiness": "node scripts/production-readiness.js",
+    "smoke": "node scripts/smoke-http.js"
+  }
+}

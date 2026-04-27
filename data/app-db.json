@@ -1,0 +1,477 @@
+{
+  "users": [
+    {
+      "id": "fca5976c-ba2f-444a-88fe-92d35e441b64",
+      "email": "user_1776225306326@example.com",
+      "salt": "f8e3215e642cdb00b5358315bea18614",
+      "passwordHash": "64a10bc43972d6230c795af200162f4ced300bebb8b87d0faa6811204c83e3e2587a2f4dcea3a647a53d4ce726f87f74176f7c9ce1e7250070403bdb69c6cd1e",
+      "createdAt": "2026-04-15T03:55:06.656Z",
+      "lastLoginAt": "2026-04-15T03:55:06.668Z",
+      "role": "user",
+      "emailVerified": false,
+      "subscriptionStatus": "trial",
+      "subscriptionPlan": "trial",
+      "trialEndsAt": null,
+      "stripeCustomerId": "",
+      "stripeSubscriptionId": "",
+      "planRenewsAt": null
+    },
+    {
+      "id": "d2231850-67a9-482b-8c26-fa8088d5a84b",
+      "email": "a1776225579628@ex.com",
+      "salt": "847595479f4ba2bb62982ec4307042e1",
+      "passwordHash": "349a261d830d8c018d18ec8b689dfec8ec73b003b2b04c03e71f71bfbc54c668f8f3bd1c2ef81ad7a7d4e392ce1cceede2e209593c51984f8132dae97aa4202f",
+      "createdAt": "2026-04-15T03:59:39.673Z",
+      "lastLoginAt": "2026-04-15T03:59:39.673Z",
+      "role": "user",
+      "emailVerified": false,
+      "subscriptionStatus": "trial",
+      "subscriptionPlan": "trial",
+      "trialEndsAt": null,
+      "stripeCustomerId": "",
+      "stripeSubscriptionId": "",
+      "planRenewsAt": null
+    },
+    {
+      "id": "b6b78b4d-0f41-48b9-8d88-55dbe81d7c54",
+      "email": "test1776226113929@example.com",
+      "salt": "f4c0d52821fa8b3284ff296674ff12a5",
+      "passwordHash": "12bfe6a4f36ec47b0ec5eaa790133ad57d8097eafc83ef87e7e6d6dbf1da967de2426ab4d885dde70c2b9e16b96bf1c0be38c369d0a7ba809a6f3494dae8561a",
+      "role": "user",
+      "emailVerified": true,
+      "createdAt": "2026-04-15T04:08:33.990Z",
+      "lastLoginAt": "2026-04-15T04:08:34.075Z",
+      "subscriptionStatus": "trial",
+      "subscriptionPlan": "trial",
+      "trialEndsAt": null,
+      "stripeCustomerId": "",
+      "stripeSubscriptionId": "",
+      "planRenewsAt": null
+    },
+    {
+      "id": "3575dbc1-d6b5-45a7-8aed-acf6977a4032",
+      "email": "qa1776226966958@example.com",
+      "salt": "42244994ce38ba3b710e4543ebbb5f5f",
+      "passwordHash": "f5ac5f614107b925e67950a7900d832c4766ba339e7e99321fa75d91c6c9dc18e4cfa436dc85e99c163d7fc22ca504ae757122512c81d3e909fe9e72b9a72d6a",
+      "role": "user",
+      "emailVerified": true,
+      "subscriptionStatus": "trial",
+      "subscriptionPlan": "trial",
+      "trialEndsAt": "2026-04-22T04:22:47.004Z",
+      "stripeCustomerId": "",
+      "stripeSubscriptionId": "",
+      "planRenewsAt": null,
+      "createdAt": "2026-04-15T04:22:47.005Z",
+      "lastLoginAt": "2026-04-15T04:22:47.005Z"
+    },
+    {
+      "id": "bd8d5aa8-ced0-4e76-a32a-c8af80336c7f",
+      "email": "smoke1776227017884@ex.com",
+      "salt": "c4e048d43ef9fb9076c9ed475b1a078e",
+      "passwordHash": "63f5871ec15d8cf276affc82d75ecb79e6af52bd1a02afa009dcb79c25c8b37059f6e5290722bcef4020f06b9227da19cfd6354b0a280d0381295857ca87f451",
+      "role": "user",
+      "emailVerified": false,
+      "subscriptionStatus": "trial",
+      "subscriptionPlan": "trial",
+      "trialEndsAt": "2026-04-22T04:23:37.937Z",
+      "stripeCustomerId": "",
+      "stripeSubscriptionId": "",
+      "planRenewsAt": null,
+      "createdAt": "2026-04-15T04:23:37.937Z",
+      "lastLoginAt": "2026-04-15T04:23:37.937Z"
+    },
+    {
+      "id": "d1ab7538-f7b6-424b-bad9-554e8c1312fd",
+      "email": "ok1776227145249@e.com",
+      "salt": "366c048ed7bad21efd9d45d5fffb1477",
+      "passwordHash": "25dae8aacd8e53b9602c942e0dfdbe461182f12959739870f78c18410122176fee48ee728b92bbc392671ad8228a2053a9ea904282395e8bf3850d3400299044",
+      "role": "user",
+      "emailVerified": false,
+      "subscriptionStatus": "trial",
+      "subscriptionPlan": "trial",
+      "trialEndsAt": "2026-04-22T04:25:45.315Z",
+      "stripeCustomerId": "",
+      "stripeSubscriptionId": "",
+      "planRenewsAt": null,
+      "createdAt": "2026-04-15T04:25:45.315Z",
+      "lastLoginAt": "2026-04-15T04:25:45.315Z"
+    },
+    {
+      "id": "8dcf9e9b-be4f-4628-b3f7-cc6c024140e0",
+      "email": "admin@localhost.local",
+      "salt": "625dea1f4093a260bf220382b0428f97",
+      "passwordHash": "123a33435da98503defc6c5a39af13160bb4910209797d8c92c88608968893e09608e37e6072d6743451cc7598835c69569e45cab54923fbc258515ae04578db",
+      "role": "admin",
+      "emailVerified": true,
+      "subscriptionStatus": "trial",
+      "subscriptionPlan": "trial",
+      "trialEndsAt": "2026-05-04T03:44:02.776Z",
+      "stripeCustomerId": "",
+      "stripeSubscriptionId": "",
+      "planRenewsAt": null,
+      "createdAt": "2026-04-27T03:44:02.776Z",
+      "lastLoginAt": "2026-04-27T03:46:11.471Z"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "70bd88529c5ad8d163267c88bc7a889baba5f2787ea54339ae9a259498c4872c",
+      "userId": "fca5976c-ba2f-444a-88fe-92d35e441b64",
+      "createdAt": "2026-04-15T03:55:06.668Z",
+      "expiresAt": "2026-05-15T03:55:06.668Z"
+    },
+    {
+      "token": "60972ea2bf57b037a2f7222d3c286c570d71f07c371379ce44be99916692fbe6",
+      "userId": "d2231850-67a9-482b-8c26-fa8088d5a84b",
+      "createdAt": "2026-04-15T03:59:39.673Z",
+      "expiresAt": "2026-05-15T03:59:39.673Z"
+    },
+    {
+      "token": "0dfac612b292cf08a62e0f8ae06f03750db46b76b6ed4f5398a86192ec6fbcb9",
+      "userId": "3575dbc1-d6b5-45a7-8aed-acf6977a4032",
+      "createdAt": "2026-04-15T04:22:47.007Z",
+      "expiresAt": "2026-05-15T04:22:47.007Z"
+    },
+    {
+      "token": "86aa337e8faa9687c2e1c23e41da2af788ad11c76ec38a9cfeb5d33535ad4a2b",
+      "userId": "bd8d5aa8-ced0-4e76-a32a-c8af80336c7f",
+      "createdAt": "2026-04-15T04:23:37.938Z",
+      "expiresAt": "2026-05-15T04:23:37.938Z"
+    },
+    {
+      "token": "df6657459983936a0af69f272163de6bab2ba9dc0be2ef90668a8de6ae62e872",
+      "userId": "d1ab7538-f7b6-424b-bad9-554e8c1312fd",
+      "createdAt": "2026-04-15T04:25:45.317Z",
+      "expiresAt": "2026-05-15T04:25:45.317Z"
+    },
+    {
+      "token": "c3c0494098cad64baeac1f10e0ef7c7ea30a8e710b5ebeabff4c9dc028ff8a63",
+      "userId": "8dcf9e9b-be4f-4628-b3f7-cc6c024140e0",
+      "createdAt": "2026-04-27T03:44:02.776Z",
+      "expiresAt": "2026-05-27T03:44:02.776Z"
+    },
+    {
+      "token": "f30616ea267ae2f8d4aec8e1a64438000fa7de92bf985516dca1af42e650dae1",
+      "userId": "8dcf9e9b-be4f-4628-b3f7-cc6c024140e0",
+      "createdAt": "2026-04-27T03:46:11.471Z",
+      "expiresAt": "2026-05-27T03:46:11.471Z"
+    }
+  ],
+  "savedSearches": [
+    {
+      "id": "3538bb84-3ae1-45b1-a3c6-a27a5e4fb960",
+      "userId": "fca5976c-ba2f-444a-88fe-92d35e441b64",
+      "name": "Florida Search",
+      "query": {
+        "location": "florida"
+      },
+      "createdAt": "2026-04-15T03:55:06.693Z",
+      "updatedAt": "2026-04-15T03:55:06.693Z"
+    },
+    {
+      "id": "0ddd5578-0050-48d2-8e00-497a7025d380",
+      "userId": "d2231850-67a9-482b-8c26-fa8088d5a84b",
+      "name": "fl",
+      "query": {
+        "location": "florida"
+      },
+      "createdAt": "2026-04-15T03:59:39.693Z",
+      "updatedAt": "2026-04-15T03:59:39.693Z"
+    }
+  ],
+  "savedDeals": [
+    {
+      "id": "a1ca5d04-8f56-4ed9-bbab-376411901575",
+      "userId": "fca5976c-ba2f-444a-88fe-92d35e441b64",
+      "listing": {
+        "address": "123 Test St",
+        "price": 100000
+      },
+      "analysis": {
+        "dealScore": 75
+      },
+      "notes": "",
+      "createdAt": "2026-04-15T03:55:06.707Z",
+      "updatedAt": "2026-04-15T03:55:06.707Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "800f1200-1881-4e00-85a1-82369e359d72",
+      "userId": "fca5976c-ba2f-444a-88fe-92d35e441b64",
+      "eventType": "auth.register",
+      "payload": {
+        "email": "user_1776225306326@example.com"
+      },
+      "ip": "::1",
+      "userAgent": "node",
+      "createdAt": "2026-04-15T03:55:06.669Z"
+    },
+    {
+      "id": "355cad58-2bbc-4b69-82c4-df2237a8e51d",
+      "userId": "fca5976c-ba2f-444a-88fe-92d35e441b64",
+      "eventType": "search.save",
+      "payload": {
+        "searchId": "3538bb84-3ae1-45b1-a3c6-a27a5e4fb960",
+        "name": "Florida Search"
+      },
+      "ip": "::1",
+      "userAgent": "node",
+      "createdAt": "2026-04-15T03:55:06.693Z"
+    },
+    {
+      "id": "36a8d6eb-2724-476c-b41b-dbfa90556c9e",
+      "userId": "fca5976c-ba2f-444a-88fe-92d35e441b64",
+      "eventType": "deal.save",
+      "payload": {
+        "dealId": "a1ca5d04-8f56-4ed9-bbab-376411901575",
+        "address": "123 Test St"
+      },
+      "ip": "::1",
+      "userAgent": "node",
+      "createdAt": "2026-04-15T03:55:06.707Z"
+    },
+    {
+      "id": "9cf05ea7-eecf-4e4c-ac40-7e2c07df4172",
+      "userId": "d2231850-67a9-482b-8c26-fa8088d5a84b",
+      "eventType": "auth.register",
+      "payload": {
+        "email": "a1776225579628@ex.com"
+      },
+      "ip": "::1",
+      "userAgent": "node",
+      "createdAt": "2026-04-15T03:59:39.673Z"
+    },
+    {
+      "id": "c47b7b02-6cfd-4640-9cb8-f73eabe4f9bd",
+      "userId": "d2231850-67a9-482b-8c26-fa8088d5a84b",
+      "eventType": "search.save",
+      "payload": {
+        "searchId": "0ddd5578-0050-48d2-8e00-497a7025d380",
+        "name": "fl"
+      },
+      "ip": "::1",
+      "userAgent": "node",
+      "createdAt": "2026-04-15T03:59:39.694Z"
+    },
+    {
+      "id": "cd4227be-70d9-4f43-821e-8e53ebaf58e8",
+      "userId": "b6b78b4d-0f41-48b9-8d88-55dbe81d7c54",
+      "eventType": "auth.register",
+      "payload": {
+        "email": "test1776226113929@example.com"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-15T04:08:34.008Z"
+    },
+    {
+      "id": "1aca9b3e-c325-4459-96c7-d1a00a0abbdf",
+      "userId": "b6b78b4d-0f41-48b9-8d88-55dbe81d7c54",
+      "eventType": "auth.email_verify.complete",
+      "payload": {
+        "email": "test1776226113929@example.com"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-15T04:08:34.023Z"
+    },
+    {
+      "id": "8834a9d2-2487-4b92-9ecc-367431f616b4",
+      "userId": "b6b78b4d-0f41-48b9-8d88-55dbe81d7c54",
+      "eventType": "auth.password_reset.request",
+      "payload": {
+        "email": "test1776226113929@example.com",
+        "delivery": "manual"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-15T04:08:34.032Z"
+    },
+    {
+      "id": "8f47dfc8-7812-42d3-a962-681df4e029d7",
+      "userId": "b6b78b4d-0f41-48b9-8d88-55dbe81d7c54",
+      "eventType": "auth.password_reset.complete",
+      "payload": {
+        "email": "test1776226113929@example.com"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-15T04:08:34.075Z"
+    },
+    {
+      "id": "f7529c29-7857-4d6a-bcd7-7fdb0b244882",
+      "userId": "3575dbc1-d6b5-45a7-8aed-acf6977a4032",
+      "eventType": "auth.register",
+      "payload": {
+        "email": "qa1776226966958@example.com"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-15T04:22:47.007Z"
+    },
+    {
+      "id": "a4a235a8-02ce-4715-b410-18396ef0caa3",
+      "userId": "3575dbc1-d6b5-45a7-8aed-acf6977a4032",
+      "eventType": "auth.email_verify.complete",
+      "payload": {
+        "email": "qa1776226966958@example.com"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-15T04:22:47.043Z"
+    },
+    {
+      "id": "664419f6-b16e-4626-9d9c-e626407cf7f7",
+      "userId": "3575dbc1-d6b5-45a7-8aed-acf6977a4032",
+      "eventType": "crm.lead.create",
+      "payload": {
+        "leadId": "4a679fbc-6a2d-4587-a4d8-bf4782a5df58",
+        "stage": "new"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-15T04:22:47.092Z"
+    },
+    {
+      "id": "b0f5ff4d-a154-42ad-a123-11b8de272995",
+      "userId": "bd8d5aa8-ced0-4e76-a32a-c8af80336c7f",
+      "eventType": "auth.register",
+      "payload": {
+        "email": "smoke1776227017884@ex.com"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-15T04:23:37.938Z"
+    },
+    {
+      "id": "4616e156-0fe3-419a-a6a2-63a997116220",
+      "userId": "bd8d5aa8-ced0-4e76-a32a-c8af80336c7f",
+      "eventType": "crm.lead.create",
+      "payload": {
+        "leadId": "92fb461c-b6c5-4da2-bab7-2522cee27b67",
+        "stage": "new"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-15T04:23:38.023Z"
+    },
+    {
+      "id": "bff20f23-6b75-4981-a16f-54b411785b41",
+      "userId": "d1ab7538-f7b6-424b-bad9-554e8c1312fd",
+      "eventType": "auth.register",
+      "payload": {
+        "email": "ok1776227145249@e.com"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-15T04:25:45.317Z"
+    },
+    {
+      "id": "2d61e16a-a3a8-45bb-bb2c-329e912d498c",
+      "userId": "d1ab7538-f7b6-424b-bad9-554e8c1312fd",
+      "eventType": "crm.lead.create",
+      "payload": {
+        "leadId": "b129fc8e-a108-4a14-90db-b88ad1b03c34",
+        "stage": "new"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-15T04:25:45.398Z"
+    },
+    {
+      "id": "00380106-4d98-4699-9547-7895bc672a4d",
+      "userId": "8dcf9e9b-be4f-4628-b3f7-cc6c024140e0",
+      "eventType": "auth.register",
+      "payload": {
+        "email": "admin@localhost.local"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-27T03:44:02.777Z"
+    },
+    {
+      "id": "15649a90-f65b-40d5-900c-9becc04dc1c0",
+      "userId": "8dcf9e9b-be4f-4628-b3f7-cc6c024140e0",
+      "eventType": "auth.login",
+      "payload": {
+        "email": "admin@localhost.local"
+      },
+      "ip": "::ffff:127.0.0.1",
+      "userAgent": "",
+      "createdAt": "2026-04-27T03:46:11.471Z"
+    }
+  ],
+  "passwordResetTokens": [],
+  "emailVerifyTokens": [
+    {
+      "id": "8540650d-e70e-4b61-bc4e-620fa1e4a5c7",
+      "userId": "bd8d5aa8-ced0-4e76-a32a-c8af80336c7f",
+      "email": "smoke1776227017884@ex.com",
+      "type": "email_verify",
+      "tokenHash": "27f6f4c1176db6907c8178d8bd44cbdf3267d7d49aa94a7c364a9a36798cedf7",
+      "createdAt": "2026-04-15T04:23:37.937Z",
+      "expiresAt": "2026-04-16T04:23:37.937Z",
+      "usedAt": null
+    },
+    {
+      "id": "f437c633-58b1-4d0d-9e8e-867086b5f603",
+      "userId": "d1ab7538-f7b6-424b-bad9-554e8c1312fd",
+      "email": "ok1776227145249@e.com",
+      "type": "email_verify",
+      "tokenHash": "90bcec944fc338363f1865793748b06ca6bbf90dbbce4f9044cbc3f6ef5115a8",
+      "createdAt": "2026-04-15T04:25:45.315Z",
+      "expiresAt": "2026-04-16T04:25:45.315Z",
+      "usedAt": null
+    }
+  ],
+  "crmLeads": [
+    {
+      "id": "4a679fbc-6a2d-4587-a4d8-bf4782a5df58",
+      "userId": "3575dbc1-d6b5-45a7-8aed-acf6977a4032",
+      "listingId": "",
+      "address": "123 Main St, Tampa, FL",
+      "stage": "new",
+      "priority": "medium",
+      "contactName": "",
+      "contactPhone": "",
+      "contactEmail": "",
+      "notes": "",
+      "nextActionAt": null,
+      "createdAt": "2026-04-15T04:22:47.092Z",
+      "updatedAt": "2026-04-15T04:22:47.092Z"
+    },
+    {
+      "id": "92fb461c-b6c5-4da2-bab7-2522cee27b67",
+      "userId": "bd8d5aa8-ced0-4e76-a32a-c8af80336c7f",
+      "listingId": "",
+      "address": "1 test st, miami, fl",
+      "stage": "new",
+      "priority": "medium",
+      "contactName": "",
+      "contactPhone": "",
+      "contactEmail": "",
+      "notes": "",
+      "nextActionAt": null,
+      "createdAt": "2026-04-15T04:23:38.023Z",
+      "updatedAt": "2026-04-15T04:23:38.023Z"
+    },
+    {
+      "id": "b129fc8e-a108-4a14-90db-b88ad1b03c34",
+      "userId": "d1ab7538-f7b6-424b-bad9-554e8c1312fd",
+      "listingId": "",
+      "address": "10 test ave",
+      "stage": "new",
+      "priority": "medium",
+      "contactName": "",
+      "contactPhone": "",
+      "contactEmail": "",
+      "notes": "",
+      "nextActionAt": null,
+      "createdAt": "2026-04-15T04:25:45.398Z",
+      "updatedAt": "2026-04-15T04:25:45.398Z"
+    }
+  ],
+  "crmTasks": [],
+  "billingEvents": []
+}
